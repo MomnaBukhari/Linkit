@@ -1,0 +1,36 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0%;
+    padding: 0;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: rgb(255, 255, 255);
+}
+
+.NavBar{
+    width: 100vw;
+    height: 10%;
+    background-color:aliceblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 5%;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+.NavBar a{
+    text-decoration: none;
+    color: black;
+}
+.NavBar2{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 1% 5%; */
+    align-items: center;
+    gap: 20px;
+}
+
