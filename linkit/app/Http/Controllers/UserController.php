@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Events\WelcomeDashboard;
 
 class UserController extends Controller
 {
@@ -41,6 +42,13 @@ class UserController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+
+            // Retrieve the authenticated user's name
+            $username = Auth::user()->name;
+
+            // Dispatch the event with the username
+            event(new WelcomeDashboard($username));
+
             return redirect()->intended('dashboard');
         } else {
             return back()->withErrors([
@@ -48,6 +56,7 @@ class UserController extends Controller
             ])->onlyInput('email');
         }
     }
+
 
     public function logout(Request $request)
     {

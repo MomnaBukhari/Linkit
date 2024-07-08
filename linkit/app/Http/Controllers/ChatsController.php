@@ -18,18 +18,21 @@ class ChatsController extends Controller
     {
         return view('inbox');
     }
-
-    public function fetchMessages()
-    {
-        return Message::with('user')->get();
+    public function message(Request $request){
+        return [];
     }
 
-    public function sendMessage(Request $request)
-    {
-        $user = Auth::user();
-        $message = $user->messages()->create([
-            'message' => $request->input('message')
-        ]);
-        return ['status' => 'Message Sent!'];
-    }
+    // public function fetchMessages()
+    // {
+    //     return Message::with('user')->get();
+    // }
+
+    // public function sendMessage(Request $request)
+    // {
+    //     $user = Auth::user();
+    //     $message = $user->messages()->create([
+    //         'message' => $request->input('message')
+    //     ]);
+    //     return ['status' => 'Message Sent!'];
+    // }
 }

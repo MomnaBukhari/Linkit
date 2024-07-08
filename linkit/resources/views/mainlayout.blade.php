@@ -6,6 +6,7 @@
     <link rel="icon" href="favicon.ico">
     {{-- pusher configuration --}}
     @yield('css')
+    @yield('pusherscript')
 </head>
 
 <body>
