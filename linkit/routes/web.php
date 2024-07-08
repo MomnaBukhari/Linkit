@@ -10,8 +10,9 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/dashboard', function () {
-    $user = Auth::user();
-    return view('dashboard', compact('user'));
+    $users = \App\Models\User::all(); // Fetch all users
+    $authUser = Auth::user(); // Fetch authenticated user
+    return view('dashboard', compact('users', 'authUser'));
 })->middleware('auth')->name('dashboard');
 
 Route::get('/inbox', function () {
