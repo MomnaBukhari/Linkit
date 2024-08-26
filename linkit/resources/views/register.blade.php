@@ -39,7 +39,7 @@
 .custom-card-header h3 {
     margin: 0;
     font-size: 1.5rem;
-    color: #004085;
+    color: #71b5fa;
 }
 
 /* Card Body */
@@ -55,14 +55,14 @@
     display: block;
     margin-bottom: 5px;
     font-weight: 500;
-    color: #004085;
+    color: #000000;
 }
 
 .custom-form-control {
     width: 100%;
     padding: 10px;
     border: 1px solid #ced4da;
-    color: #004085;
+    color: #71b5fa;
 }
 
 /* Buttons */
@@ -82,11 +82,11 @@
 }
 
 .custom-btn-primary {
-    background-color: #0056b3;
+    background-color: #71b5fa;
 }
 
 .custom-btn-primary:hover {
-    background-color: #003f7f;
+    background-color: #71b5fa;
 }
 
 .custom-btn-secondary {
@@ -116,12 +116,12 @@
 
 .custom-btn-link {
     text-decoration: none;
-    color: #0056b3;
+    color: #000000;
     transition: color 0.3s;
 }
 
 .custom-btn-link:hover {
-    color: #003f7f;
+    color: #71b5fa;
 }
 
 </style>

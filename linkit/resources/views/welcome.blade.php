@@ -169,6 +169,12 @@
     <h4>Welcome to LinkIt</h4>
     <p>A Place Where You Can Communicate with Each Other for Free. Just <span style="color:#7ec3ff; font-weight: bold;">LinkIt</span> now!</p>
     <p>Are you logged in already?</p>
-    <a href="/dashboard">Go to Dashboard</a>
+
+    @auth
+        <a href="{{ route('dashboard') }}">Go to Dashboard</a>
+    @else
+        <a href="{{ route('register') }}">Start Now</a>
+    @endauth
 </div>
 @endsection
+
