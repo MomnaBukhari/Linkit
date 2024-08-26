@@ -4,7 +4,6 @@
     <title>Link♾️It</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico">
-    {{-- pusher configuration --}}
     @yield('css')
     @yield('pusherscript')
 </head>
